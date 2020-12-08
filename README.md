@@ -29,7 +29,6 @@ USAGE
 # Commands
 <!-- commands -->
 * [`OpportunityHelper create [OPPORTUNITYNAME]`](#opportunityhelper-create-opportunityname)
-* [`OpportunityHelper deploy [FILE]`](#opportunityhelper-deploy-file)
 * [`OpportunityHelper help [COMMAND]`](#opportunityhelper-help-command)
 
 ## `OpportunityHelper create [OPPORTUNITYNAME]`
