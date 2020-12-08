@@ -1,3 +1,5 @@
 export default {
-    template_repo: '/home/cashlion/Work/opportunity-template'
+    repo : {
+        template: '/home/cashlion/Work/opportunity-template'
+    }
 }
