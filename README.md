@@ -19,7 +19,7 @@ $ npm install -g opportunity-helper
 $ OpportunityHelper COMMAND
 running command...
 $ OpportunityHelper (-v|--version|version)
-opportunity-helper/0.0.0 linux-x64 node-v11.15.0
+opportunity-helper/0.0.0 linux-x64 node-v14.15.1
 $ OpportunityHelper --help [COMMAND]
 USAGE
   $ OpportunityHelper COMMAND
@@ -28,8 +28,22 @@ USAGE
 <!-- usagestop -->
 # Commands
 <!-- commands -->
+* [`OpportunityHelper add [OPPORTUNITYNAME]`](#opportunityhelper-add-file)
 * [`OpportunityHelper create [OPPORTUNITYNAME]`](#opportunityhelper-create-opportunityname)
 * [`OpportunityHelper help [COMMAND]`](#opportunityhelper-help-command)
+
+## `OpportunityHelper add [FILE]`
+
+```
+USAGE
+  $ OpportunityHelper add [FILE]
+
+OPTIONS
+  -f, --force      overwrite existing opportunity
+  -h, --help       show CLI help
+```
+
+_See code: [src/commands/add.ts](https://github.com/nick-staked/opportunity-helper/blob/v0.0.0/src/commands/add.ts)_
 
 ## `OpportunityHelper create [OPPORTUNITYNAME]`
 
@@ -38,8 +52,8 @@ USAGE
   $ OpportunityHelper create [OPPORTUNITYNAME]
 
 OPTIONS
-  -f, --force
-  -h, --help   show CLI help
+  -h, --help     show CLI help
+  -v, --verbose  increased logging resolution
 ```
 
 _See code: [src/commands/create.ts](https://github.com/nick-staked/opportunity-helper/blob/v0.0.0/src/commands/create.ts)_
