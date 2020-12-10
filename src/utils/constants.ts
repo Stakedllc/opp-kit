@@ -1,5 +1,5 @@
 export default {
     repo : {
-        template: '/home/cashlion/Work/opportunity-template'
+        template: 'https://github.com/Stakedllc/opportunity-template.git'
     }
 }
