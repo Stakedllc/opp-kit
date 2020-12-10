@@ -6,7 +6,7 @@ import { join } from "path";
 import { readFile, rename, writeFile } from 'fs';
 
 export default class Create extends Command {
-  static description = 'Create new opportunity project.'
+  static description = 'Create new opportunity workspace.'
 
   static flags = {
     help: flags.help({char: 'h'}),
@@ -41,26 +41,36 @@ export default class Create extends Command {
   async git(opportunityName:string) {
     this.log(`\nCloning repo: ${CONSTANTS.repo.template}\n`);
     await Clone.clone(CONSTANTS.repo.template, opportunityName)
-    this.log(`\nSuccessfully created new opportunity: ${opportunityName}\n`);
+    this.log(`\nSuccessfully cloned template repo..`);
   }
 
   private async customize(name: string) {
+    this.log("Customizing Template Repo..")
     const dir = join(process.cwd(), name);
+    const pascalName = MISC.case.pascal(name);
+    const camelName = MISC.case.camel(name);
+    const kebabName = MISC.case.kebab(name);
+    const generalReplacement = (data:string) => data
+          .replace(/(MyOpportunity)/g, pascalName)
+          .replace(/(myOpportunity)/g, camelName);
+    const kebab = (data:string) => data.replace(/(opportunity-template)/g, kebabName);
     const files = [
-      'contracts/MyOpportunity.sol',
-      'scripts/sample-script.js',
-      'test/sample-test.js'
+      {path:'contracts/MyOpportunity.sol', replace: generalReplacement},
+      {path:'scripts/sample-script.js', replace: generalReplacement},
+      {path:'test/sample-test.js', replace: generalReplacement},
+      {path:'package-lock.json', replace: kebab},
+      {path:'package.json', replace: kebab}
     ];
-    const oppName = MISC.case.pascal(name);
 
     const promises = files.map((file, i) => new Promise((resolve, reject) => {
-      const path = join(dir, file);
+      const path = join(dir, file.path);
       readFile(path, { encoding: 'utf8' }, (err, data) => {
         if ( err ) reject(err);
-        writeFile(path, data.replace(/(MyOpportunity|myOpportunity)/g, oppName), err => {
+        const output = file.replace(data);
+        writeFile(path, output, err => {
           if ( err ) reject(err);
           if ( !i ) { // rename base contract
-            rename(path, join(dir, 'contracts', `${oppName}.sol`), resolve);
+            rename(path, join(dir, 'contracts', `${pascalName}.sol`), resolve);
           } else {
             resolve();
           }
@@ -68,6 +78,7 @@ export default class Create extends Command {
       });
     }));
     await Promise.all(promises);
+    this.log(`${pascalName} Opportunity Created..`)
   }
   
   async install(opportunityName: string, verbose = false) {
