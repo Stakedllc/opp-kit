@@ -1,11 +1,11 @@
 {
-  "name": "opportunity-helper",
+  "name": "opp-kit",
   "version": "0.0.1",
   "author": "nicholasjpaterno",
   "bin": {
-    "OpportunityHelper": "./bin/run"
+    "opp-kit": "./bin/run"
   },
-  "bugs": "https://github.com/nick-staked/opportunity-helper/issues",
+  "bugs": "https://github.com/nick-staked/opp-kit/issues",
   "dependencies": {
     "@oclif/command": "^1",
     "@oclif/config": "^1",
@@ -39,7 +39,7 @@
     "/npm-shrinkwrap.json",
     "/oclif.manifest.json"
   ],
-  "homepage": "https://github.com/nick-staked/opportunity-helper/",
+  "homepage": "https://github.com/nick-staked/opp-kit/",
   "keywords": [
     "oclif"
   ],
@@ -47,12 +47,12 @@
   "main": "lib/index.js",
   "oclif": {
     "commands": "./lib/commands",
-    "bin": "OpportunityHelper",
+    "bin": "opp-kit",
     "plugins": [
       "@oclif/plugin-help"
     ]
   },
-  "repository": "https://github.com/nick-staked/opportunity-helper/",
+  "repository": "https://github.com/nick-staked/opp-kit/",
   "scripts": {
     "postpack": "rm -f oclif.manifest.json",
     "posttest": "eslint . --ext .ts --config .eslintrc",

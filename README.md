@@ -1,12 +1,12 @@
-OpportunityHelper
+Opp-Kit
 =================
 
 
 
 [![oclif](https://img.shields.io/badge/cli-oclif-brightgreen.svg)](https://oclif.io)
-[![Version](https://img.shields.io/npm/v/OpportunityHelper.svg)](https://npmjs.org/package/OpportunityHelper)
-[![Downloads/week](https://img.shields.io/npm/dw/OpportunityHelper.svg)](https://npmjs.org/package/OpportunityHelper)
-[![License](https://img.shields.io/npm/l/OpportunityHelper.svg)](https://github.com//nick-staked/opportunity-helper/opp/blob/master/package.json)
+<!-- [![Version](https://img.shields.io/npm/v/Opp-Kit.svg)](https://npmjs.org/package/Opp-Kit) -->
+<!-- [![Downloads/week](https://img.shields.io/npm/dw/Opp-Kit.svg)](https://npmjs.org/package/Opp-Kit) -->
+<!-- [![License](https://img.shields.io/npm/l/Opp-Kit.svg)](https://github.com//nick-staked/opp-kit/opp/blob/master/package.json) -->
 
 <!-- toc -->
 * [Usage](#usage)
@@ -15,54 +15,54 @@ OpportunityHelper
 # Usage
 <!-- usage -->
 ```sh-session
-$ npm install -g opportunity-helper
-$ OpportunityHelper COMMAND
+$ npm install -g opp-kit
+$ opp-kit COMMAND
 running command...
-$ OpportunityHelper (-v|--version|version)
-opportunity-helper/0.0.0 linux-x64 node-v14.15.1
-$ OpportunityHelper --help [COMMAND]
+$ opp-kit (-v|--version|version)
+opp-kit/0.0.0 linux-x64 node-v14.15.1
+$ opp-kit --help [COMMAND]
 USAGE
-  $ OpportunityHelper COMMAND
+  $ opp-kit COMMAND
 ...
 ```
 <!-- usagestop -->
 # Commands
 <!-- commands -->
-* [`OpportunityHelper add [OPPORTUNITYNAME]`](#opportunityhelper-add-file)
-* [`OpportunityHelper create [OPPORTUNITYNAME]`](#opportunityhelper-create-opportunityname)
-* [`OpportunityHelper help [COMMAND]`](#opportunityhelper-help-command)
+* [`opp-kit add [OPPORTUNITYNAME]`](#opp-kit-add-file)
+* [`opp-kit create [OPPORTUNITYNAME]`](#opp-kit-create-opportunityname)
+* [`opp-kit help [COMMAND]`](#opp-kit-help-command)
 
-## `OpportunityHelper add [FILE]`
+## `opp-kit add [FILE]`
 
 ```
 USAGE
-  $ OpportunityHelper add [FILE]
+  $ opp-kit add [FILE]
 
 OPTIONS
   -f, --force      overwrite existing opportunity
   -h, --help       show CLI help
 ```
 
-_See code: [src/commands/add.ts](https://github.com/nick-staked/opportunity-helper/blob/v0.0.0/src/commands/add.ts)_
+_See code: [src/commands/add.ts](https://github.com/nick-staked/opp-kit/blob/v0.0.0/src/commands/add.ts)_
 
-## `OpportunityHelper create [OPPORTUNITYNAME]`
+## `opp-kit create [OPPORTUNITYNAME]`
 
 ```
 USAGE
-  $ OpportunityHelper create [OPPORTUNITYNAME]
+  $ opp-kit create [OPPORTUNITYNAME]
 
 OPTIONS
   -h, --help     show CLI help
   -v, --verbose  increased logging resolution
 ```
 
-_See code: [src/commands/create.ts](https://github.com/nick-staked/opportunity-helper/blob/v0.0.0/src/commands/create.ts)_
+_See code: [src/commands/create.ts](https://github.com/nick-staked/opp-kit/blob/v0.0.0/src/commands/create.ts)_
 
-## `OpportunityHelper help [COMMAND]`
+## `opp-kit help [COMMAND]`
 
 ```
 USAGE
-  $ OpportunityHelper help [COMMAND]
+  $ opp-kit help [COMMAND]
 
 ARGUMENTS
   COMMAND  command to show help for
