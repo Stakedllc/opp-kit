@@ -5,7 +5,7 @@
   "bin": {
     "opp-kit": "./bin/run"
   },
-  "bugs": "https://github.com/nick-staked/opp-kit/issues",
+  "bugs": "https://github.com/Stakedllc/opp-kit/issues",
   "dependencies": {
     "@oclif/command": "^1",
     "@oclif/config": "^1",
@@ -39,7 +39,7 @@
     "/npm-shrinkwrap.json",
     "/oclif.manifest.json"
   ],
-  "homepage": "https://github.com/nick-staked/opp-kit/",
+  "homepage": "https://github.com/Stakedllc/opp-kit/",
   "keywords": [
     "oclif"
   ],
@@ -52,7 +52,7 @@
       "@oclif/plugin-help"
     ]
   },
-  "repository": "https://github.com/nick-staked/opp-kit/",
+  "repository": "https://github.com/Stakedllc/opp-kit/",
   "scripts": {
     "postpack": "rm -f oclif.manifest.json",
     "posttest": "eslint . --ext .ts --config .eslintrc",
